@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+/*font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+    min-height: 100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+.grid{
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #FFF ;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.img img{
+    max-width: 100%;
+    display: inherit;
+}
+.content{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+p.category{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13PX;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+h2.name{
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+    line-height: 1em;
+    color: hsl(212, 21%, 14%);
+}
+
+p.discription{
+    color: hsl(212, 21%, 14%);
+    line-height: 1.6em;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+}
+p.current_price{
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+    font-size: 35px;
+    padding-right: 25px;
+}
+
+p.old_price{
+    color:  hsl(212, 21%, 14%);
+    text-decoration:line-through;
+}
+
+button{
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    padding: 14px 0;
+    border-radius: 12px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color .3s ease;
+}
+
+button:hover{
+    background-color: hsl(158, 36%, 23%);
+}
+button img{
+    padding-right: 7px;
+}
+
+@media only screen and (max-width : 628px) {
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .img img{
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .content{
+        display: block;
+    }
+
+    p.category,h2.name, p.discription, .price{
+        padding-bottom: 23px;
+    }
+}
+
+@media only screen and (max-width : 375px) {
+    .container{
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+    .img img{
+        max-height:250px ;
+    }
+    .content{
+        padding: 24px;
+    }
+    p.category,h2.name, p.discription, .price{
+        padding-bottom: 16px;
+    }
+    h2.name{
+        font-size: 28px;
+    }
+    p.discription{
+        font-size: 12px;
+    }
+    p.current_price{
+        font-size: 22px;
+    }
+    button{
+        padding: 12px 0;
+        font-size: 13px;
+    }
+
+    button img{
+        height: 13px;
+    }
+    
+}
