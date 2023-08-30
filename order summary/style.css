@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+ /*
+ font-family: 'Outfit', sans-serif;
+font-family: 'Red Hat Display', sans-serif;
+ */
+
+ *{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-image:url(./images/pattern-background-desktop.svg) ;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: hsl(225, 100%, 98%);
+    position: relative;
+
+ }
+ .container{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,  -50%);
+    max-width: 370px; 
+    margin: 0 auto;
+    align-items: center;
+    background-color:  hsl(0, 0%, 100%);
+   border-radius: 12px;
+   overflow: hidden;
+    
+ }
+
+.content{
+    padding: 20px ;
+    text-align: center;
+}
+h2.heading{
+    
+    font-weight: 900;
+    font-size: 24px;
+    color: hsl(223, 47%, 23%);
+    margin-bottom: 20px;
+
+}
+p.discription{
+    color:#939191;
+    margin-bottom: 20px;
+}
+.plan{
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 12px;
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.left-box{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.left-box div{
+    margin-left: 20px;
+}
+.left-box div h5{
+    font-weight: 900;
+    font-size: 16px;
+    color: hsl(223, 47%, 23%); 
+}
+.left-box div p{
+    
+    font-size: 12px;
+    color:#939191;
+}
+.plan a{
+    font-weight: 900;
+    color: hsl(245, 75%, 52%);
+    transition: color .3s ease;
+}
+.plan a:hover{
+    text-decoration: none;
+    color:hsl(245, 59%, 64%); 
+}
+a.payment{
+    display: block;
+    text-decoration: none;
+    color:white;
+    background-color: hsl(245, 75%, 52%); 
+    padding: 18px 0;
+    border-radius: 12px;
+    margin: 13px 0;
+    transition: color .3s ease;
+}
+a.payment:hover{
+    background-color:hsl(245, 59%, 64%);  
+}
+a.cancle-btn{
+    color:hsl(224, 23%, 55%);
+    text-decoration: none;
+    font-weight: 900;
+    transition: color .3s ease;
+}
+a.cancle-btn:hover{
+    color:hsl(223, 47%, 23%);
+}
+
+@media only screen and (max-width : 425px){
+    body{
+        background-image: url(./images/pattern-background-mobile.svg);
+        font-size: 14px;
+    }
+    .container{
+        max-width:87%
+    }
+    .content h2{
+        font-size: 23px;
+    }
+    div.plan{
+        padding: 10px;
+    }
+    .left-box div{
+        margin-left: 10px;
+    }
+    a.payment,a.cancle-btn, .plan a,p.discription{
+        font-size: 13px;
+    }
+    .content{
+        padding: 9% 7%;
+    }
+    .left-box div h5{
+        font-size: 14px;
+    }
+
+}
